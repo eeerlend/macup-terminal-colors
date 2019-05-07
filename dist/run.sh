@@ -51,5 +51,3 @@ for ((i=0; i<${#macup_terminal_colors[@]}; ++i)); do
   fi
 
 done
-
-rm -r "$PWD/.tmp"
