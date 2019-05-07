@@ -13,7 +13,7 @@ npm install eeerlend/macup-terminal-colors --save
 Add your own themes to be installed in the macup configuration file like this...
 
 ```bash
-macup_terminal_themes+=(
+macup_terminal_colors+=(
   "iterm;material-design;https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
   "terminal;materialshell-ocean;https://raw.githubusercontent.com/carloscuesta/materialshell/master/shell-color-themes/macOS/terminal/materialshell-oceanic.terminal"
 )

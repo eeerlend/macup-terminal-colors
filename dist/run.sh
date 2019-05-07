@@ -25,10 +25,10 @@ function install_terminal_theme {
 
 # todo: check if array is declared up front!
 # shellcheck disable=SC2154
-for ((i=0; i<${#macup_terminal_themes[@]}; ++i)); do
-  type="$(echo "${macup_terminal_themes[i]}" | cut -d';' -f1)"
-  name="$(echo "${macup_terminal_themes[i]}" | cut -d';' -f2)"
-  url="$(echo "${macup_terminal_themes[i]}" | cut -d';' -f3)"
+for ((i=0; i<${#macup_terminal_colors[@]}; ++i)); do
+  type="$(echo "${macup_terminal_colors[i]}" | cut -d';' -f1)"
+  name="$(echo "${macup_terminal_colors[i]}" | cut -d';' -f2)"
+  url="$(echo "${macup_terminal_colors[i]}" | cut -d';' -f3)"
 
   if [ ! -d "$PWD/.tmp" ]; then 
     mkdir "$PWD/.tmp/" 
