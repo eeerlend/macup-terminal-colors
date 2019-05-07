@@ -1,19 +1,25 @@
 #!/bin/bash
 
 function install_iterm_theme {
-  local tmp_name=$2
+  local tmp_file=$2
+  local name=$1
+
+  report_from_package " Installing $name theme for iTerm2"
+
   echo " iTerm will now be opened, asking to import color scheme. Close the "
   echo " iTerm instance when you have imported the color scheme, and the script "
   echo " will continue"
 
-  sleep 3
-  open -W -n "$tmp_name"
+  sleep 1
+  open -W -n "$tmp_file"
 }
 
 function install_terminal_theme {
   local tmp_file=$2
   local name=$1
   local content
+
+  report_from_package " Installing $name theme for Terminal"
   
   # We only want to use the part inside the <dict></dict> of the xml file
   content=$(awk '/<dict>/,/<\/dict>/' "$tmp_file")
@@ -45,3 +51,5 @@ for ((i=0; i<${#macup_terminal_colors[@]}; ++i)); do
   fi
 
 done
+
+rm -r "$PWD/.tmp"
