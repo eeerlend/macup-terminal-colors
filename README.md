@@ -1,6 +1,6 @@
 # macup-terminal-colors
 
-A [macup](https://github.com/eeerlend/macup) module that installs your terminal theme
+A [macup](https://github.com/eeerlend/macup-builder) module that installs your terminal theme
 
 ## Installation
 Run the following command to add it to your repo
